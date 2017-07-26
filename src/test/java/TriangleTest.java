@@ -1,5 +1,7 @@
 import org.junit.Test;
 
+import java.util.Arrays;
+
 import static org.junit.Assert.assertEquals;
 
 public class TriangleTest {
@@ -29,5 +31,15 @@ public class TriangleTest {
     @Test
     public void test_draw_vertical_line_when_n_is_4() throws Exception {
         assertEquals("*/n*/n*/n*/n", triangle.drawLine(4, "V"));
+    }
+
+    @Test
+    public void test_draw_triangle_when_n_is_3() throws Exception {
+        assertEquals(Arrays.asList("*","**","***"), triangle.drawTriangle(3));
+    }
+
+    @Test
+    public void test_draw_triangle_when_n_is_5() throws Exception {
+        assertEquals(Arrays.asList("*","**","***","****","*****"), triangle.drawTriangle(5));
     }
 }

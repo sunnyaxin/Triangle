@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 class Triangle {
     Triangle() {
     }
@@ -19,5 +21,13 @@ class Triangle {
         if (type.equals("H"))
             return "*";
         return "*/n";
+    }
+
+    ArrayList<String> drawTriangle(int n) {
+        ArrayList<String> list = new ArrayList<>(n);
+        for (int i = 1; i <= n; i++) {
+            list.add(drawLine(i, "H"));
+        }
+        return list;
     }
 }
